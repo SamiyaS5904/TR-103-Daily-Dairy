@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TR-103 Industrial Training Daily Diary | Samiya Sehgal</title>
+<meta name="description" content="TR-103 Industrial Training Daily Diary — Samiya Sehgal, Computer Science &amp; Engineering, Guru Nanak Dev Engineering College, Ludhiana. Eight-week internship as an AI Automation Intern at Carrot Owl Education OPC Pvt Ltd.">
+
+<!-- Applies the saved theme before the page paints, so there is no flash. -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('tr103-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<!-- The ?v= number busts the browser cache. Bump it whenever style.css changes. -->
+<link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+<!-- ============================ College header ============================ -->
+<header class="college-bar">
+  <div class="wrap college-bar__inner">
+    <!--
+      OPTIONAL: college logo. Drop the GNDEC logo into site/assets/ as
+      gne-logo.png and remove the comment markers around the <img> below.
+    -->
+    <!-- <img class="college-bar__logo" src="assets/gne-logo.png" alt=""> -->
+    <div class="college-bar__text">
+      <p class="college-bar__name">Guru Nanak Dev Engineering College, Ludhiana</p>
+      <p class="college-bar__dept">Department of Computer Science &amp; Engineering</p>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== Navigation ============================== -->
+<nav class="nav" aria-label="Sections">
+  <div class="wrap nav__inner">
+    <ul class="nav__list">
+      <li><a href="#cover">Cover</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#weeks">Weekly Diary</a></li>
+      <li><a href="#outcomes">Outcomes</a></li>
+      <li><a href="#documents">Documents</a></li>
+      <li><a href="#mentor">Mentor</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      <span class="theme-toggle__label">Dark</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================================ Cover ================================= -->
+<section id="cover" class="section section--cover">
+  <div class="wrap">
+    <div class="cover__head">
+      <!--
+        The organisation's logo. It is a transparent PNG with black lettering, so
+        it sits on a white panel to stay readable in dark mode too.
+      -->
+      <div class="cover__logo-panel">
+        <img class="cover__logo" src="assets/carrot-owl-logo.png"
+             alt="Carrot Owl Education" width="1376" height="743">
+      </div>
+      <div class="cover__titles">
+        <p class="eyebrow">Industrial Training Documentation</p>
+        <h1 class="cover__title">TR-103 Industrial Training Daily Diary</h1>
+      </div>
+    </div>
+
+    <table class="details">
+      <caption class="visually-hidden">Trainee and training details</caption>
+      <tbody>
+        <tr><th scope="row">Trainee Name</th><td>Samiya Sehgal</td></tr>
+        <tr><th scope="row">Year &amp; Branch</th><td>Final Year, Computer Science &amp; Engineering</td></tr>
+        <tr><th scope="row">University Roll No. (URN)</th><td>2302662</td></tr>
+        <tr><th scope="row">Class Roll No. (CRN)</th><td>2315205</td></tr>
+        <tr><th scope="row">Training Organisation</th><td>Carrot Owl Education OPC Pvt Ltd.</td></tr>
+        <tr><th scope="row">Role</th><td>AI Automation Intern</td></tr>
+        <tr><th scope="row">Internship Duration</th><td>8 Weeks <span class="muted">(22 June &ndash; 22 August 2026)</span></td></tr>
+      </tbody>
+    </table>
+
+    <p class="cover__submission">
+      Submitted in partial fulfilment of the requirement for the award of the degree of<br>
+      <strong>Bachelor of Technology &mdash; Computer Science &amp; Engineering</strong>
+    </p>
+  </div>
+</section>
+
+<!-- =============================== Overview =============================== -->
+<section id="overview" class="section">
+  <div class="wrap">
+    <h2>Training Overview</h2>
+    <div class="prose">
+      <p>
+        This eight-week industrial training was carried out at Carrot Owl Education
+        OPC Pvt Ltd. as an AI Automation Intern. The organisation runs several
+        Telegram learning communities, and producing content for all of them by
+        hand had become close to a full-time job. The training was to automate that
+        work, and it produced an internal marketing tool called
+        <strong>CommunityFlow</strong>.
+      </p>
+      <p>
+        The work was practical rather than taught. The first week went on
+        understanding how the marketing team actually worked and testing whether a
+        ready-made no-code platform could do the job; the remaining weeks went on
+        building, correcting and finishing the tool that replaced that routine. Each
+        weekly diary records what was attempted, what did not work, and what changed
+        as a result.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== Project ================================ -->
+<section id="project" class="section section--tint">
+  <div class="wrap">
+    <h2>The Project &mdash; CommunityFlow</h2>
+
+    <div class="prose">
+      <p>
+        An internal tool that plans, writes, designs and publishes educational posts
+        for Carrot Owl's Telegram communities. One codebase serves every community,
+        and each community is described entirely by its own configuration file, so
+        adding one needs no programming.
+      </p>
+      <p>
+        Five AI stages run in a fixed order &mdash; <strong>Planner</strong>,
+        <strong>Researcher</strong>, <strong>Writer</strong>,
+        <strong>Editor</strong> and <strong>Designer</strong> &mdash; each with a
+        single job. Graphics are not AI-generated: each post's data is filled into
+        an HTML layout themed with the community's own colours and rendered by
+        headless Chromium. A person approves every post before the scheduler
+        publishes it.
+      </p>
+    </div>
+
+    <h3>What was delivered</h3>
+    <ul class="compact">
+      <li>One codebase serving <strong>three communities</strong> &mdash; Campus Placement Prep, CAT and MBA Entrance Prep, SAT Prep.</li>
+      <li>Adding a community needs only configuration &mdash; no Python and no new templates.</li>
+      <li>A topic pool that refills itself and rejects repeats, even rephrased ones.</li>
+    </ul>
+
+    <p class="note">
+      Built and demonstrated for the three communities, and prepared for
+      containerised deployment. It was not put into live public use during the
+      internship.
+    </p>
+  </div>
+</section>
+
+<!-- ================================ Stack ================================= -->
+<section id="stack" class="section">
+  <div class="wrap">
+    <h2>Technology Stack</h2>
+
+    <ul class="tags">
+      <li>Python</li>
+      <li>Flask</li>
+      <li>OpenAI API</li>
+      <li>Serper API</li>
+      <li>Telegram Bot API</li>
+      <li>Playwright</li>
+      <li>PostgreSQL</li>
+      <li>Docker</li>
+      <li>Git</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================= Weekly diary ============================= -->
+<section id="weeks" class="section section--tint">
+  <div class="wrap">
+    <h2>Weekly Diary</h2>
+    <p class="lede">Eight weeks. Each PDF is the full diary in the TR-103 format.</p>
+
+    <div class="weeks">
+
+      <article class="week">
+        <span class="week__num">Week 1</span>
+        <h3 class="week__title">Understanding the Problem and Evaluating Existing Tools</h3>
+        <p class="week__sum">Mapped the manual workflow, then trialled Make.com and n8n before recommending a custom tool.</p>
+        <a class="week__link" href="pdfs/WEEK_1.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 2</span>
+        <h3 class="week__title">From a Single AI Step to a Multi-Stage Pipeline</h3>
+        <p class="week__sum">Built a one-call prototype, found the voice drifted, and redesigned it as separate stages.</p>
+        <a class="week__link" href="pdfs/WEEK_2.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 3</span>
+        <h3 class="week__title">Building the Content Pipeline and Prompt Engineering</h3>
+        <p class="week__sum">Implemented Planner, Researcher, Writer and Editor, and wrote the brand-voice prompts.</p>
+        <a class="week__link" href="pdfs/WEEK_3.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 4</span>
+        <h3 class="week__title">Visual Assets, Post Types and the Dashboard</h3>
+        <p class="week__sum">Added the Designer stage, HTML-to-image rendering, and the dashboard and scheduler.</p>
+        <a class="week__link" href="pdfs/WEEK_4.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 5</span>
+        <h3 class="week__title">Multi-Community Configuration and the Second Community</h3>
+        <p class="week__sum">Moved every community-specific setting out of the code, then added a second community.</p>
+        <a class="week__link" href="pdfs/WEEK_5.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 6</span>
+        <h3 class="week__title">The Topic Pool and Preventing Repetition</h3>
+        <p class="week__sum">Replaced the fixed calendar with a self-refilling topic pool that rejects rephrased repeats.</p>
+        <a class="week__link" href="pdfs/WEEK_6.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 7</span>
+        <h3 class="week__title">Reliability and Moving to a Proper Database</h3>
+        <p class="week__sum">Moved the data to PostgreSQL, added timeouts and retries, and made publishing survive a restart.</p>
+        <a class="week__link" href="pdfs/WEEK_7.pdf">View PDF</a>
+      </article>
+
+      <article class="week">
+        <span class="week__num">Week 8</span>
+        <h3 class="week__title">Verification, Documentation, Deployment and Final Demonstration</h3>
+        <p class="week__sum">Verified the main flows, wrote the documentation, containerised it and demonstrated it.</p>
+        <a class="week__link" href="pdfs/WEEK_8.pdf">View PDF</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Outcomes ================================ -->
+<section id="outcomes" class="section">
+  <div class="wrap">
+    <h2>Learning Outcomes</h2>
+    <p class="lede">By the end of this internship, I was able to:</p>
+    <ul class="outcomes">
+      <li>Design and build a multi-stage AI pipeline in which each stage carries a single responsibility.</li>
+      <li>Write and refine prompts that hold a consistent brand voice across several communities.</li>
+      <li>Use embeddings to compare meaning rather than wording, and act on the result.</li>
+      <li>Automate branded graphics by rendering HTML in a browser, and keep the data reliable in PostgreSQL.</li>
+      <li>Judge when to build rather than adopt a tool, and where a person still belongs in an automated system.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== Documents =============================== -->
+<section id="documents" class="section section--tint">
+  <div class="wrap">
+    <h2>Confirmation and Certificate</h2>
+    <p class="lede">Official documents from Carrot Owl Education OPC Pvt Ltd.</p>
+
+    <!-- ====================================================================
+         TO FILL IN — the two documents, in this order.
+
+         Put the files into  site/certificates/  with exactly these names:
+
+           site/certificates/confirmation-letter.pdf      (first card)
+           site/certificates/internship-certificate.pdf   (second card)
+
+         If they are images, use .jpg or .png and change the href to match.
+         Then delete the <p class="placeholder"> line inside that card.
+
+         For a thumbnail, also add  <name>-preview.jpg  beside the file and
+         remove the comment markers around the <img> in that card.
+         ==================================================================== -->
+
+    <div class="certs">
+
+      <article class="cert">
+        <!-- <img class="cert__preview" src="certificates/confirmation-letter-preview.jpg" alt=""> -->
+        <h3>Confirmation Letter</h3>
+        <p>The organisation's letter confirming the internship and its duration.</p>
+        <p class="placeholder">[To be added &mdash; <code>certificates/confirmation-letter.pdf</code>]</p>
+        <a class="cert__link" href="certificates/confirmation-letter.pdf">View Letter</a>
+      </article>
+
+      <article class="cert">
+        <!-- <img class="cert__preview" src="certificates/internship-certificate-preview.jpg" alt=""> -->
+        <h3>Internship Certificate</h3>
+        <p>Certifies completion of the eight-week training as an AI Automation Intern.</p>
+        <p class="placeholder">[To be added &mdash; <code>certificates/internship-certificate.pdf</code>]</p>
+        <a class="cert__link" href="certificates/internship-certificate.pdf">View Certificate</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================== Mentor ================================= -->
+<section id="mentor" class="section">
+  <div class="wrap">
+    <h2>Training Mentor</h2>
+    <div class="mentor">
+      <h3 class="mentor__name">Ms Anjani Golla</h3>
+      <p class="mentor__role">Founder, Carrot Owl Education OPC Pvt Ltd.</p>
+      <p>
+        Supervised the eight-week training and set the direction of the project
+        &mdash; that CommunityFlow should be built as an internal marketing tool the
+        organisation could carry forward and extend, rather than as a one-off
+        exercise. Reviewed the work at each stage.
+      </p>
+
+      <ul class="mentor__links">
+        <li>
+          <a href="https://www.linkedin.com/in/anjani-golla/" rel="noopener noreferrer" target="_blank">
+            LinkedIn profile
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>TR-103 Industrial Training Daily Diary</strong> &mdash; Samiya Sehgal</p>
+    <p>Department of Computer Science &amp; Engineering, Guru Nanak Dev Engineering College, Ludhiana</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn   = document.getElementById('theme-toggle');
+    var root  = document.documentElement;
+    var label = btn.querySelector('.theme-toggle__label');
+
+    function current() {
+      var set = root.getAttribute('data-theme');
+      if (set) return set;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function paint() {
+      var dark = current() === 'dark';
+      label.textContent = dark ? 'Light' : 'Dark';
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tr103-theme', next); } catch (e) {}
+      paint();
+    });
+
+    paint();
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+# TR-103 Documentation — what stays local
+#
+# Two folders, one job each:
+#   PDFs/    the deliverables — these are committed and go to GitHub
+#   LaTeX/   the editable sources — these stay on this machine only
+
+# ── Stray source files ───────────────────────────────────────────────────────
+# The site uses its own copy at site/assets/carrot-owl-logo.png, so this
+# original in the root is not needed on GitHub.
+COE LOGO.png
+
+# ── Internal working documents ───────────────────────────────────────────────
+# Notes and instructions for preparing the documentation. They stay on this
+# machine; they are not part of what goes to GitHub.
+CLAUDE.md
+plan.md
+report-brief.md
+
+# ── The official report ──────────────────────────────────────────────────────
+# Work in progress and not for GitHub. The whole folder, so nothing inside it
+# can be committed by accident.
+report/
+report_details.json
+
+# ── LaTeX sources ────────────────────────────────────────────────────────────
+# The whole folder, so nothing inside it can be committed by accident.
+LaTeX/
+
+# Belt and braces: a .tex left anywhere else is still ignored.
+*.tex
+
+# ── LaTeX build artefacts ────────────────────────────────────────────────────
+# Produced on every compile and never worth keeping.
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# ── Editor and OS noise ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*~
+*.swp
